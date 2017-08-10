@@ -1,0 +1,27 @@
+html
+	head
+		title Form Tester
+		link(rel="stylesheet" href="css/bootstrap.min.css")
+		style.
+			body{padding-top:70px}
+	body
+		nav.nav.navbar-default.navbar-fixed-top
+			div.container
+				a.navbar-brand(href="webku") Home
+		div.contaier
+			div.row
+				div.col-md-4
+				div.col-md-4
+					form(action="/", method="post")
+						div.form-group
+							label(for="say") Say:
+							input.form-control(name="say" placeholder="say greet" required)
+						div.form-group
+							label(for="to") To:
+							input.form-control(name="to" placeholder="to who" required)
+						div.form-group
+							button.btn.btn-default.btn-sm.btn-block Send greet
+				div.col-md-4
+		include ./footer.pug
+		script(src="js/jquery.min.js")
+		script(src="js/bootstrap.min.js")
